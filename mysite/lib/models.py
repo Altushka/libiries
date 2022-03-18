@@ -14,7 +14,7 @@ class Books(models.Model):
     authors = models.ForeignKey(Authors, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     year = models.IntegerField(max_length=4)
-    publication_house = models.CharField(max_length=15)
+    publication_house = models.CharField(max_length=40)
 
 class Books_Genres(models.Model):
     b_g_books = models.ForeignKey(Books, on_delete=models.CASCADE)
